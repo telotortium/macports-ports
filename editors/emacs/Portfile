@@ -94,11 +94,13 @@ if {$subport eq $name || $subport eq "emacs-app"} {
 
 if {$subport eq "emacs-devel" || $subport eq "emacs-app-devel"} {
     epoch           1
-    version         20191120
+    version         20200229
 
     fetch.type      git
     git.url         http://git.savannah.gnu.org/r/emacs.git
-    git.branch      c928f41330ece779127a0c4c9b6ca0fdde8a1046
+    # Tag 'emacs-27.0.90'
+    git.branch      c5f255d68156926923232b1edadf50faac527861
+
 
     pre-configure {
         system -W ${worksrcpath} "sh ./autogen.sh"
